@@ -41,10 +41,10 @@ class RegisterUserView(generics.CreateAPIView):
 
 class LoginUserView(APIView):
     def post(self, request):
-        email = request.data.get("email")  # ✅ Ahora obtenemos el email correctamente
+        email = request.data.get("email")  
         password = request.data.get("password")
 
-        user = authenticate(request, email=email, password=password)  # ✅ Autenticamos con email
+        user = authenticate(request, email=email, password=password)  
 
         if user:
             refresh = RefreshToken.for_user(user)

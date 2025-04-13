@@ -14,7 +14,7 @@ const Register = () => {
             const response = await register(email, username, password);
             console.log("Registro exitoso:", response);
             alert("Registro exitoso");
-            navigate("/login"); // Redirigir a la página de login después de registrarse
+            navigate("/login"); 
         } catch (error) {
             console.error("Error en el registro:", error);
             alert(`Error en el registro: ${JSON.stringify(error.response?.data || error, null, 2)}`);

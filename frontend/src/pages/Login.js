@@ -14,7 +14,7 @@ const Login = () => {
             if (response && response.access) {
                 alert("Inicio de sesión exitoso");
                 localStorage.setItem("token", response.access);
-                navigate("/main"); // Redirigir a la página principal
+                navigate("/main"); 
             } else {
                 alert("Error en el inicio de sesión");
             }
